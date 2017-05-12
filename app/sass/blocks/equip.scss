@@ -1,0 +1,50 @@
+.equip {
+	margin: 30px 0;
+	padding: 0 10px;
+	border: 1px solid #a9cd49;
+
+	@include clearfix;
+
+	.title {
+		margin-top: 20px;
+	}
+	.underline {
+		font-size: 18px;
+		line-height: 28px;
+	}
+	.button {
+		margin: 1em 0;
+	}
+}
+
+.equip__img {
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 700px;
+	overflow: hidden;
+
+	img {
+		@include center;
+		min-width: 100%;
+		min-height: 100%;
+	}
+}
+
+.equip__content {
+	float: right;
+	width: 45%;
+}
+
+.equip__price {
+	font-size: 36px;
+	font-weight: bold;
+	color: $orange;
+}
+
+.equip__hot {
+	text-transform: uppercase;
+	line-height: 32px;
+	color: #e30613;
+	border-bottom: 1px solid #3c3c3b;
+}

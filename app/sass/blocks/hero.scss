@@ -1,0 +1,42 @@
+.hero {
+	@include clearfix;
+}
+
+.hero__content {
+	float: left;
+	width: 60%;
+}
+
+.hero__img {
+	position: relative;
+	float: right;
+	width: 40%;
+	height: 400px;
+	overflow: hidden;
+
+	img {
+		@include center;
+		min-width: 100%;
+		min-height: 100%;
+	}
+}
+
+.hero__old-price {
+	text-decoration: line-through;
+	font-size: 24px;
+	line-height: 25px;
+	color: #e30613;
+}
+
+.hero__new-price {
+	text-transform: uppercase;
+	font-size: 24px;
+	line-height: 32px;
+	color: #000;
+
+	span {
+		font-weight: bold;
+	}
+}
+
+.hero__list {}
