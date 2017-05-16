@@ -396,7 +396,7 @@ a {
   color: #3c3c3b; }
 
 .container {
-  width: 100%;
+  width: 1150px;
   max-width: 1150px;
   margin: 0 auto;
   padding: 0 15px; }
@@ -458,17 +458,23 @@ a {
       cursor: pointer;
       opacity: 0.6; }
 
-.button {
+.button,
+a.fastbuy.button {
   position: relative;
   display: inline-block;
+  width: auto;
+  height: auto;
+  margin: 0;
   padding: 23px 45px;
   border: 0;
   border-radius: 10px;
   text-transform: uppercase;
   text-align: center;
+  font-weight: normal;
   font-size: 24px;
   line-height: 32px;
   color: #fff;
+  background: none;
   background-color: #f39200;
   cursor: pointer;
   vertical-align: middle;
@@ -483,10 +489,13 @@ a {
   -ms-touch-action: manipulation;
       touch-action: manipulation;
   -webkit-appearance: button; }
-  .button:hover, .button:active {
+  .button:hover, .button:active,
+  a.fastbuy.button:hover,
+  a.fastbuy.button:active {
     text-decoration: none;
     outline: 0; }
-  .button--big {
+  .button--big,
+  a.fastbuy.button--big {
     display: block;
     margin: 30px auto; }
 
@@ -554,19 +563,20 @@ a {
     min-width: 100%;
     min-height: 100%; }
 
-.hero__old-price {
-  text-decoration: line-through;
-  font-size: 24px;
-  line-height: 25px;
-  color: #e30613; }
-
-.hero__new-price {
+.hero__sale {
+  width: 300px;
+  height: 125px;
   text-transform: uppercase;
-  font-size: 24px;
-  line-height: 32px;
-  color: #000; }
-  .hero__new-price span {
-    font-weight: bold; }
+  text-align: center;
+  font-size: 26px;
+  line-height: 38px;
+  color: #fff;
+  background: url("../img/sale.svg") center no-repeat;
+  background-size: 125%; }
+  .hero__sale span {
+    display: block;
+    text-decoration: line-through;
+    color: #878787; }
 
 .equip {
   margin: 30px 0;
@@ -609,12 +619,70 @@ a {
   font-size: 36px;
   font-weight: bold;
   color: #f39200; }
+  .equip__price span {
+    text-decoration: line-through;
+    font-weight: normal;
+    color: #000; }
+
+.equip__cart {
+  position: relative;
+  padding-left: 110px;
+  text-transform: uppercase;
+  line-height: 32px;
+  color: #bdd446; }
+  .equip__cart:before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 0;
+    width: 90px;
+    height: 58px;
+    background: url("../img/halva.png") center no-repeat;
+    background-size: contain; }
 
 .equip__hot {
   text-transform: uppercase;
   line-height: 32px;
   color: #e30613;
   border-bottom: 1px solid #3c3c3b; }
+
+.timer {
+  margin-top: 30px;
+  padding: 0 20px;
+  border: 1px solid #bdd446; }
+
+.timer__list {
+  width: 100%;
+  height: 230px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
+  .timer__list li {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 44px;
+    color: #fff;
+    border-radius: 50%;
+    background-color: #bdd446; }
+    .timer__list li span {
+      position: absolute;
+      bottom: -70px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      font-size: 32px;
+      color: #000; }
 
 .options__list {
   padding: 0;
@@ -648,6 +716,36 @@ a {
   text-transform: uppercase;
   line-height: 32px;
   color: #000; }
+
+.options__pdf {
+  position: relative;
+  display: block;
+  margin-bottom: 30px;
+  padding: 30px 110px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #000; }
+  .options__pdf:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 96px;
+    height: 96px;
+    background: url("../img/pdf.svg") center no-repeat;
+    background-size: contain; }
+
+.features__row::after {
+  content: "";
+  display: table;
+  line-height: 0;
+  clear: both; }
+
+.features__half {
+  width: 50%;
+  float: left; }
+  .features__half--right {
+    float: right; }
 
 .order .underline {
   font-size: 18px;

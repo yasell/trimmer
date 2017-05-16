@@ -27,3 +27,24 @@
 	line-height: 32px;
 	color: #000;
 }
+
+.options__pdf {
+	position: relative;
+	display: block;
+	margin-bottom: 30px;
+	padding: 30px 110px;
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #000;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: -10px;
+		left: 0;
+		width: 96px;
+		height: 96px;
+		background: url("../img/pdf.svg") center no-repeat;
+		background-size: contain;
+	}
+}

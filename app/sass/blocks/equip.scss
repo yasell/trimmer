@@ -40,6 +40,31 @@
 	font-size: 36px;
 	font-weight: bold;
 	color: $orange;
+
+	span {
+		text-decoration: line-through;
+		font-weight: normal;
+		color: #000;
+	}
+}
+
+.equip__cart {
+	position: relative;
+	padding-left: 110px;
+	text-transform: uppercase;
+	line-height: 32px;
+	color: $green;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: -12px;
+		left: 0;
+		width: 90px;
+		height: 58px;
+		background: url("../img/halva.png") center no-repeat;
+		background-size: contain;
+	}
 }
 
 .equip__hot {

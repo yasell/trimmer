@@ -1,0 +1,12 @@
+.features__row {
+	@include clearfix;
+}
+
+.features__half {
+	width: 50%;
+	float: left;
+
+	&--right {
+		float: right;
+	}
+}

@@ -21,22 +21,20 @@
 	}
 }
 
-.hero__old-price {
-	text-decoration: line-through;
-	font-size: 24px;
-	line-height: 25px;
-	color: #e30613;
-}
-
-.hero__new-price {
+.hero__sale {
+	width: 300px;
+	height: 125px;
 	text-transform: uppercase;
-	font-size: 24px;
-	line-height: 32px;
-	color: #000;
+	text-align: center;
+	font-size: 26px;
+	line-height: 38px;
+	color: #fff;
+	background: url("../img/sale.svg") center no-repeat;
+	background-size: 125%;
 
 	span {
-		font-weight: bold;
+		display: block;
+		text-decoration: line-through;
+		color: $gray;
 	}
 }
-
-.hero__list {}
